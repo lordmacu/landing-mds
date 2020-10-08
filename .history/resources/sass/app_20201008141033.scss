@@ -1,0 +1,220 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// media aliases and breakpoints
+$screen-sm-min: 600px;
+$screen-md-min: 960px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1920px;
+
+$screen-xs-max: 599px;
+$screen-sm-max: 959px;
+$screen-md-max: 1279px;
+$screen-lg-max: 1919px;
+$screen-xl-max: 5000px;
+
+// media devices
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: #{$screen-xl-min}) and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// media lt queries
+@mixin lt-sm {
+  @media screen and (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin lt-md {
+  @media screen and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin lt-lg {
+  @media screen and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lt-xl {
+  @media screen and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// media gt queries
+@mixin gt-xs {
+  @media screen and (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin gt-sm {
+  @media screen and (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin gt-md {
+  @media screen and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin gt-lg {
+  @media screen and (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+body{
+    background-color: white;
+}
+
+.header {
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(244, 123, 56, 1) 0%,
+    rgba(244, 110, 37, 1) 46%,
+    rgba(244, 86, 0, 1) 73%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(244, 123, 56, 1) 0%,
+    rgba(244, 110, 37, 1) 46%,
+    rgba(244, 86, 0, 1) 73%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(244, 123, 56, 1) 0%,
+    rgba(244, 110, 37, 1) 46%,
+    rgba(244, 86, 0, 1) 73%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#020024",
+      endColorstr="#f45600",
+      GradientType=1
+    );
+
+    position: relative;
+
+    &::before{
+        content: " ";
+    display: block;
+    width: 256px;
+    height: 331px;
+    background-image: url(/img/circlecorder.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    }
+
+     
+.carousel-inner {
+    padding-left: 60px;
+    padding-right: 50px;
+    padding-top: 0px;
+    padding-bottom: 80px;
+  }
+
+  
+
+  h1 {
+    color: white;
+    margin: 0;
+    @include for_breakpoint(desktop) {
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+  
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+  }
+
+  .carousel-control-next {
+    width: 50px;
+  }
+
+  .navbar-brand {
+    img {
+      width: 80px;
+    }
+  }
+}
+
+.content-app{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.orange-btn:not(:disabled):not(.disabled):active, .orange-btn:not(:disabled):not(.disabled).active, .show > .orange-btn.dropdown-toggle {
+    color: #fff;
+    background-color: #f45600cf;
+    border-color: #f45600cf;
+}
+
+.orange-btn{
+    background-color: #F45600;
+    border-color:  #F45600;
+
+    &:hover, &:focus, &:active{
+        color: #fff;
+        background-color: #f45600cf;
+        border-color: #f45600cf;
+    }
+    &:focus, &:active {
+        box-shadow: 0 0 0 0.2rem rgb(245 114 43 / 23%)
+    }
+ 
+}
+ 
+
+
+.carousel-item{
+    img{
+        display: none
+    }
+} 

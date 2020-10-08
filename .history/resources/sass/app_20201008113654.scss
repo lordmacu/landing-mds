@@ -1,0 +1,81 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.header {
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(244, 123, 56, 1) 0%,
+    rgba(244, 110, 37, 1) 46%,
+    rgba(244, 86, 0, 1) 73%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(244, 123, 56, 1) 0%,
+    rgba(244, 110, 37, 1) 46%,
+    rgba(244, 86, 0, 1) 73%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(244, 123, 56, 1) 0%,
+    rgba(244, 110, 37, 1) 46%,
+    rgba(244, 86, 0, 1) 73%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#020024",
+      endColorstr="#f45600",
+      GradientType=1
+    );
+
+    position: relative;
+
+    &::before{
+        content: " ";
+        display: inline;
+        width: 50px;
+        height: 50px;
+        background-image: url("/assets/circlecorder.png");
+    }
+
+
+  h1 {
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+  }
+
+  .carousel-control-next {
+    width: 50px;
+  }
+
+  .navbar-brand {
+    img {
+      width: 80px;
+    }
+  }
+}
+
+ 
+.carousel-inner {
+  padding-left: 60px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}

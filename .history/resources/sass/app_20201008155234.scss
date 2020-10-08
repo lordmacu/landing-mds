@@ -1,0 +1,157 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+ 
+.bg-orange{
+    background-color: #f45600;
+    background: #f45600;
+}
+body {
+  background-color: white;
+}
+
+.admin-logo{
+  img{
+    width: 80px;
+  }
+}
+
+.header {
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(244, 123, 56, 1) 0%,
+    rgba(244, 110, 37, 1) 46%,
+    rgba(244, 86, 0, 1) 73%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(244, 123, 56, 1) 0%,
+    rgba(244, 110, 37, 1) 46%,
+    rgba(244, 86, 0, 1) 73%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(244, 123, 56, 1) 0%,
+    rgba(244, 110, 37, 1) 46%,
+    rgba(244, 86, 0, 1) 73%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#020024",
+      endColorstr="#f45600",
+      GradientType=1
+    );
+
+  position: relative;
+
+  &::before {
+    @media only screen and (min-width: 600px) {
+        content: " ";
+        display: block;
+        width: 256px;
+        height: 331px;
+        background-image: url(/img/circlecorder.png);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-repeat: no-repeat;
+      }
+
+    
+  }
+
+  .carousel-inner {
+   
+    @media only screen and (min-width: 600px) {
+        padding-left: 60px;
+        padding-right: 50px;
+        padding-top: 0px;
+        padding-bottom: 80px;
+      }
+
+      @media only screen and (max-width: 600px) {
+     
+        padding-top: 50px;
+        padding-bottom: 80px;
+      }
+  }
+
+  h1 {
+    color: white;
+    margin: 0;
+    @media only screen and (min-width: 600px) {
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .carousel-control-next {
+    width: 50px;
+    @media only screen and (max-width: 600px) {
+        display: none;
+      }
+  }
+
+  .navbar-brand {
+    img {
+      width: 80px;
+    }
+  }
+}
+
+.content-app {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.orange-btn:not(:disabled):not(.disabled):active,
+.orange-btn:not(:disabled):not(.disabled).active,
+.show > .orange-btn.dropdown-toggle {
+  color: #fff;
+  background-color: #f45600cf;
+  border-color: #f45600cf;
+}
+
+.orange-btn {
+    color:white;
+  background-color: #f45600;
+  border-color: #f45600;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: #f45600cf;
+    border-color: #f45600cf;
+  }
+  &:focus,
+  &:active {
+    box-shadow: 0 0 0 0.2rem rgb(245 114 43 / 23%);
+  }
+}
+
+.carousel-item {
+  img {
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+}
